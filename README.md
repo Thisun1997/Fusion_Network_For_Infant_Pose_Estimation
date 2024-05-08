@@ -1,30 +1,30 @@
 <h1>Introduction</h1>
 
-This codebase is related to fusion networks dveloped for privacy preserved infant pose estimation. The following fusion techniques are avaialble in the implenetation.
+This codebase is related to fusion networks developed for privacy preserved 2D infant pose estimation. The following fusion techniques are available for implementation:
 - Addition
 - Concatenation
-- Iterative Attentional Feature Fusion
+- Iterative Attentional Feature Fusion (iAFF)
 
 <h1>How to get started?</h1>
 
-The code supports 2D human pose estimation of infants. You can either train a fusion model from randon weight initialization or fine tune a model initialised with weights of a fuion network fully trained using SLP dataset. The steps are as follows:
+You can either train a fusion model from random weight initialization or fine-tune a model initialized with the weights of a fusion network fully trained using the SLP dataset. The steps are as follows:
 - Download the [datasets](#datasets). 
-- To train a fusion model from the begining using SMaL dataset
-    - Navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab.
-    - Setup fusion model options under "setup options". Here the ``fuse_stage`` and ``fuse_type`` can be configured along with other required options which are explained in the notebook itself. Possible options for ``fuse_stage`` and ``fuse_type`` are:
+- To train a fusion model from the beginning using the SMaL dataset:
+    1. Navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab.
+    2. Setup fusion model options under "setup options". Here, the ``fuse_stage`` and ``fuse_type`` can be configured along with other required options, which are explained in the notebook itself. Possible options for ``fuse_stage`` and ``fuse_type`` are:
         - fuse_stage - stage at which fusion operation takes place ( either 2 or 3 )
-        - fuse_type - which fusion type is used ( either add, concat or iAFF)
-    - Execute the notebook.
-    - The trained model will be availbe in the output folder.
-- To fine tune a model initialised with weights of a fuion network fully trained using SLP dataset
-    - Locate at the root folder of the codebase.
-    - Intsall the dependencies available in [requitements.txt](requirements.txt).
-    - Execute the following command to train a new model usinf SLP dataset:</n>
-    `python main.py --modelConf config/HRposeFuseNetNewUnweighted_v2.conf --mod_src depth PM --fuse_stage n --fuse_type 'fuse_type' --ds_fd '/path/to/SLP_full_dataset'`.</n>
-    Possible options for ``fuse_stage`` and ``fuse_type`` are same as above.
-    - The trained model will be avaialble in output folder.
-    - Now fine tuning can be done by initialising the fuison model with above trained model. For this navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab. under "setup options", provide the path to model_best.pth to ``opts.bestpath_file`` and set ``opts.fine_tune`` to True.
-    - Execute the notebook and the trained model will be availbe in the output folder.
+        - fuse_type - which fusion type is used ( either add, concat, or iAFF)
+    3. Execute the notebook.
+    4. The trained model will be available in the output folder.
+- To fine tune a model initialized with the weights of a fusion network fully trained using the SLP dataset:
+    1. Locate the root folder of the codebase.
+    2. Intsall the dependencies available in [requitements.txt](requirements.txt).
+    - Execute the following command to train a new model using the SLP dataset:
+    `python main.py --modelConf config/HRposeFuseNetNewUnweighted_v2.conf --mod_src depth PM --fuse_stage n --fuse_type 'fuse_type' --ds_fd '/path/to/SLP_full_dataset'`.
+    Possible options for ``fuse_stage`` and ``fuse_type`` are the same as above.
+    - The trained model will be available in the output folder.
+    - Now fine tuning can be done by initializing the fuison model with the above trained model. For this navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab. Under "setup options", provide the path to model_best.pth to ``opts.bestpath_file`` and set ``opts.fine_tune`` to True.
+    - Execute the notebook, and the trained model will be available in the output folder.
 
 <a id="datasets"></a><h1>Datasets</h1>
 
