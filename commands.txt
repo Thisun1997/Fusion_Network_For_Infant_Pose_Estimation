@@ -1,0 +1,6 @@
+//Sample command to train train fusion network with SLP dataset
+
+python main.py --modelConf config/HRposeFuseNetNewUnweighted_v2.conf --mod_src depth PM --fuse_stage 2 --fuse_type 'add' --ds_fd '/path/to/SLP_full_dataset'
+
+//fuse_stage options - 2,3
+//fuse_type options - add,concat.iAFF
