@@ -19,12 +19,12 @@ You can either train a fusion model from random weight initialization or fine-tu
 - To fine tune a model initialized with the weights of a fusion network fully trained using the SLP dataset:
     1. Locate the root folder of the codebase.
     2. Intsall the dependencies available in [requitements.txt](requirements.txt).
-    - Execute the following command to train a new model using the SLP dataset:
+    3. Execute the following command to train a new model using the SLP dataset:
     `python main.py --modelConf config/HRposeFuseNetNewUnweighted_v2.conf --mod_src depth PM --fuse_stage n --fuse_type 'fuse_type' --ds_fd '/path/to/SLP_full_dataset'`.
     Possible options for ``fuse_stage`` and ``fuse_type`` are the same as above.
-    - The trained model will be available in the output folder.
-    - Now fine tuning can be done by initializing the fuison model with the above trained model. For this navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab. Under "setup options", provide the path to model_best.pth to ``opts.bestpath_file`` and set ``opts.fine_tune`` to True.
-    - Execute the notebook, and the trained model will be available in the output folder.
+    4. The trained model will be available in the output folder.
+    5. Now fine tuning can be done by initializing the fuison model with the above trained model. For this navigate to [notebook](infant_pose_estimation/model_train_and_test.ipynb), which can be easily run on Colab. Under "setup options", provide the path to model_best.pth to ``opts.bestpath_file`` and set ``opts.fine_tune`` to True.
+    6. Execute the notebook, and the trained model will be available in the output folder.
 
 <a id="datasets"></a><h1>Datasets</h1>
 
