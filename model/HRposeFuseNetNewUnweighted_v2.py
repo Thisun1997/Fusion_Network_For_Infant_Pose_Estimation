@@ -75,7 +75,7 @@ class FusedNet(nn.Module):
     pred_list = []
     for i in range(len(self.model_list)):
         pred = self.model_list[i](data_list[i])["stage_outputs"][self.fuse_stage-1]
-        pred_list.append(pred)  # stage-2: pred_list-[[ib1,ib2],[rb1,rb2]]
+        pred_list.append(pred)  # stage-2: pred_list-[[db1,db2],[pb1,pb2]]
      
     
     pred_branch_dict = {}
@@ -83,7 +83,7 @@ class FusedNet(nn.Module):
         t = []
         for pred in pred_list:
             t.append(pred[branch_num])
-        pred_branch_dict[branch_num] = t    # stage-2: pred_branch_dict-{0:[rgb-b1,de-b1],1:[ib2,rb2]}
+        pred_branch_dict[branch_num] = t    # stage-2: pred_branch_dict-{0:[db1,pb1],1:[db2,pb2]}
         
           
     if (self.fuseType == "concat"):
