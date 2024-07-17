@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation/badge)](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation)
+[![CodeFactor](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation/badge)](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation)        [![CodeQL](https://github.com/Thisun1997/Fusion_Network_For_Infant_Pose_Estimation/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Thisun1997/Fusion_Network_For_Infant_Pose_Estimation/actions/workflows/github-code-scanning/codeql)
 
 <h1>Introduction</h1>
 
