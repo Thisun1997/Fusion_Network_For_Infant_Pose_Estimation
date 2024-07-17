@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation/badge)](https://www.codefactor.io/repository/github/thisun1997/fusion_network_for_infant_pose_estimation)
+
 <h1>Introduction</h1>
 
 This codebase is related to fusion networks developed for privacy preserved 2D infant pose estimation. The following fusion techniques are available in the implementation:
