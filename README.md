@@ -1,6 +1,6 @@
 <h1>Introduction</h1>
 
-This codebase is related to fusion networks developed for privacy preserved 2D infant pose estimation. The following fusion techniques are available for implementation:
+This codebase is related to fusion networks developed for privacy preserved 2D infant pose estimation. The following fusion techniques are available in the implementation:
 - Addition
 - Concatenation
 - Iterative Attentional Feature Fusion (iAFF)
@@ -18,7 +18,7 @@ You can either train a fusion model from random weight initialization or fine-tu
     4. The trained model will be available in the output folder.
 - To fine tune a model initialized with the weights of a fusion network fully trained using the SLP dataset:
     1. Locate the root folder of the codebase.
-    2. Intsall the dependencies available in [requitements.txt](requirements.txt).
+    2. Install the dependencies available in [requirements.txt](requirements.txt).
     3. Execute the following command to train a new model using the SLP dataset:
     `python main.py --modelConf config/HRposeFuseNetNewUnweighted_v2.conf --mod_src depth PM --fuse_stage n --fuse_type 'fuse_type' --ds_fd '/path/to/SLP_full_dataset'`.
     Possible options for ``fuse_stage`` and ``fuse_type`` are the same as above.
